@@ -10,21 +10,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
   </head>
   <body>
     <div class="px-4 pt-5 pb-3 my-5 text-center" id="hero">
-      <h1 class="display-4 fw-bold">Únete a la primera generación de <strong>nativos cuánticos</strong></h1>
+      <h1 class="display-4 fw-bold">Join the first generation of <strong>quantum natives</strong></h1>
       <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">La nueva era de la computación cuántica está aquí. ¡Construyamos juntos el futuro de la computación!</p>
+        <p class="lead mb-4">The new quantum era is coming, and you can be part of it. Let's learn together how it works!</p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-          <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Empezar</button>
-          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Ver en GitHub</button>
+          <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Start</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4">View it on GitHub</button>
         </div>
       </div>
     </div>
     <div id="code-container" class="d-flex flex-row justify-content-between">
       <textarea id="code" name="code"></textarea>
-      <div id="code-console"></div>
+      <div id="code-console" class="overflow-auto"></div>
     </div>
     <div class="container">
       <footer class="text-center py-3 my-4 border-top">
@@ -32,5 +33,6 @@
       </footer>
     </div>
     <script src="dist/js/main.min.js"></script>
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </body>
 </html>
