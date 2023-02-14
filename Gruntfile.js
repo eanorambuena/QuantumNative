@@ -23,7 +23,6 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     'node_modules/jquery/dist/jquery.min.js',
-                    'node_modules/bootstrap/dist/js/bootstrap.min.js',
                     'js/q.js', 'js/code.js', 'js/q-evaluation.js', 'js/main.js'
                 ],
                 dest: 'dist/js/main.js'
