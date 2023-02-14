@@ -1,12 +1,12 @@
 @dark-grey: #121212;
 @white: white;
 
-.elevation-color(@color, @depth: 1) {
-    background-color: rgba(@color, @depth * 0.08);
+.elevation-color(@depth: 1) {
+    background-color: rgba(@white, @depth * 0.08);
 }
 
 .elevation(@depth: 1) {
-    .elevation-color(@white, @depth);
+    .elevation-color(@depth);
     border-radius: 0.5rem;
     color: @white;
 }
