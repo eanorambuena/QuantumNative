@@ -1,0 +1,88 @@
+@dark-grey: #121212;
+@white: white;
+
+.elevation-color(@color, @depth: 1) {
+    background-color: rgba(@color, @depth * 0.08);
+}
+
+.elevation(@depth: 1) {
+    .elevation-color(@white, @depth);
+    border-radius: 0.5rem;
+    color: @white;
+}
+
+.elevation-border(@depth: 1) {
+    border: 1rem solid rgba(@white, @depth * 0.001);
+}
+
+body {
+    background-color: @dark-grey;
+    color: @white;
+}
+
+#hero {
+    .elevation();
+    margin: 3rem;
+}
+
+#code-container {
+    height: 50vh;
+}
+
+#code, #code-console {
+    .elevation-border(0.5);
+    display: block;
+    width: calc(50% - 4.5rem);
+    height: 100%;
+    resize: none;
+    outline: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#code {
+    .elevation();
+    margin-left: 3rem;
+    outline: rgba(@white, 0.16) solid 1px;
+}
+
+#code-console {
+    .elevation(0.5);
+    margin-right: 3rem;
+    outline: rgba(@white, 0.08) solid 1px;
+}
+
+footer {
+    color: @white;
+}
+
+a {
+    color: @white;
+}
+
+a:hover {
+    color: @white;
+    text-decoration: dotted underline;
+}
+
+.btn-primary {
+    background-color: @white;
+    color: @dark-grey;
+    border-color: @white;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    .elevation();
+    border-color: @white;
+    font-weight: bold;
+}
+
+.btn-outline-secondary {
+    .elevation();
+    border-color: @white;
+}
+
+.btn-outline-secondary:hover {
+    .elevation(2);
+}
