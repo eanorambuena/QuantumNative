@@ -14,14 +14,18 @@ module.exports = function(grunt) {
             build: {
               src: 'dist/css/style.css',
               dest: 'dist/css/style.min.css'
-            }
+            },
         },
         concat: {
             options: {
                 separator: '\n/*next file*/\n\n'  //this will be put between conc. files
             },
             dist: {
-                src: ['js/q.js', 'js/code.js', 'js/q-evaluation.js', 'js/main.js'],
+                src: [
+                    'node_modules/jquery/dist/jquery.min.js',
+                    'node_modules/bootstrap/dist/js/bootstrap.min.js',
+                    'js/q.js', 'js/code.js', 'js/q-evaluation.js', 'js/main.js'
+                ],
                 dest: 'dist/js/main.js'
             }
         },
