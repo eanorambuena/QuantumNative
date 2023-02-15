@@ -28,6 +28,14 @@ $("#go-down-btn").on("click", () => {
     }, 1000);
 });
 
+$(".div-link").each(
+    (i, e) => {
+        $(e).on("click", () => {
+            window.open(e.id, "_blank");
+        });
+    }
+)
+
 setTheme();
 
 $("#code")
