@@ -18,6 +18,16 @@ const setTheme = (theme = "") => {
     $("body").css("background-image", themes[theme]);
 }
 
+$("#gh-btn").on("click", () => {
+    window.open("https://github.com/eanorambuena/QuantumNative", "_blank");
+});
+
+$("#go-down-btn").on("click", () => {
+    $("html, body").animate({
+        scrollTop: $("#code").offset().top
+    }, 1000);
+});
+
 setTheme();
 
 $("#code")

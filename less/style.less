@@ -2,13 +2,13 @@
 @white: white;
 
 .elevation-color(@depth: 1) {
-    background-color: rgba(@white, @depth * 0.08);
+    background-color: rgba(@white, @depth * 0.08)!important;
 }
 
 .elevation(@depth: 1) {
     .elevation-color(@depth);
     border-radius: 0.5rem;
-    color: @white;
+    color: @white!important;
 }
 
 .elevation-border(@depth: 1) {
@@ -76,6 +76,11 @@ a:hover {
     border-color: @white;
 }
 
+.btn:active {
+    .elevation(2);
+    border-color: @white!important;;
+}
+
 .btn-outline-secondary {
     .elevation();
     border-color: @white;
@@ -83,4 +88,8 @@ a:hover {
 
 .btn-outline-secondary:hover {
     .elevation(2);
+}
+
+.btn-outline-secondary:active {
+    .elevation(3);
 }
