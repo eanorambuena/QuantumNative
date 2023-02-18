@@ -10,9 +10,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
   </head>
   <body>
+    <header class="p-3 mb-3">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none">
+            <span id="logo" class="fw-bold fs-5"><strong>Quantum Native</strong></span>
+          </a>
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#hero" class="nav-link px-2">Overview</a></li>
+            <li><a href="#learning" class="nav-link px-2">Learn</a></li>
+            <li><a href="#coding" class="nav-link px-2">Code</a></li>
+          </ul>
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+          </form>
+          <div class="dropdown text-end">
+            <div id="theme-toggle"></div>
+          </div>
+        </div>
+      </div>
+    </header>
     <div class="px-4 pt-5 pb-3 my-5 text-center" id="hero">
       <h1 class="display-4 fw-bold">Join the first generation of <strong>quantum natives</strong></h1>
       <div class="col-lg-6 mx-auto">
@@ -23,7 +44,7 @@
         </div>
       </div>
     </div>
-    <div class="header-container mb-0">
+    <div id="learning" class="header-container mb-0">
       <h2 class="text-center">Where to learn?</h2>
     </div>
     <div class="album py-5 bg-light">
@@ -108,7 +129,7 @@
         </div>
       </div>
     </div>
-    <div class="header-container mt-0">
+    <div id="coding" class="header-container mt-0">
       <h2 class="text-center">Let's code</h2>
     </div>
     <div id="code-container" class="d-flex flex-row justify-content-between">
@@ -120,6 +141,9 @@
           Quantum Native, built with ♥ by <a href="https://github.com/eanorambuena" target="_blank">@eanorambuena</a> and powered by <a href="https://quantumjavascript.app/" target="_blank">Quantum JavaScript</a>
       </footer>
     </div>
+    <button id="go-up-btn" class="btn btn-primary">
+      <i class="fas fa-arrow-up"></i>
+    </button>
     <script src="dist/js/main.min.js"></script>
   </body>
 </html>
